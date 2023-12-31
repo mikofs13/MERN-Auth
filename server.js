@@ -18,7 +18,7 @@ app.use(express.urlencoded({
     extended: true
 }));
 app.use(cors({
-    origin: "https://mern-first-mike-project.onrender.com",
+    origin: ["https://mern-first-mike-project.onrender.com","http://localhost:3000"],
     credentials: true,
     optionsSuccessStatus: 200
 }))
