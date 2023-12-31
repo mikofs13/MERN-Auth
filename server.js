@@ -18,7 +18,7 @@ app.use(express.urlencoded({
     extended: true
 }));
 app.use(cors({
-    origin: "https://mern-first-mike-project-api.onrender.com",
+    origin: "https://mern-first-mike-project.onrender.com",
     credentials: true,
     optionsSuccessStatus: 200
 }))
