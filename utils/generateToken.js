@@ -18,7 +18,7 @@ const generateToken = (res,userId) => {
         maxAge: 30 * 60 * 60 * 24 * 1000,
         signed: true
         }) */
-        res.setHeader("Set-Cookie", `${token}; HttpOnly; Secure; SameSite=Strict `)
+        res.setHeader("Cookie", `${token}; HttpOnly; Secure; SameSite=Strict `)
 
         console.log("cookies sent");
 }
