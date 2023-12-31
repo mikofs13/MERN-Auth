@@ -7,6 +7,7 @@ dotenv.config();
 import connectDb from "./config/db.js";
 import logger from "./middleware/logEvent.js";
 import cookieParser from "cookie-parser";
+import cors from "cors"
 connectDb();
 
 const port = process.env.PORT || 5000
@@ -16,6 +17,11 @@ app.use(express.json());
 app.use(express.urlencoded({
     extended: true
 }));
+app.use(cors({
+    origin: "https://mern-first-mike-project-api.onrender.com",
+    credentials: true,
+    optionsSuccessStatus: 200
+}))
 app.use(cookieParser())
 app.use(logger);
 app.use("/api/users", userRoutes);
