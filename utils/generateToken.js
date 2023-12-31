@@ -15,8 +15,7 @@ const generateToken = (res,userId) => {
         httpOnly: true,
         secure: process.env.NODE_ENV !== "development",
         sameSite: "None",
-        maxAge: 30 * 60 * 60 * 24 * 1000,
-        signed: true
+        maxAge: 30 * 60 * 60 * 24 * 1000
         }) 
 
         console.log("cookies sent");
