@@ -10,14 +10,15 @@ const generateToken = (res,userId) => {
 
     
 
-    res.cookie("jwt", token, {
+/*     res.cookie("jwt", token, {
         
         httpOnly: true,
         secure: process.env.NODE_ENV !== "development",
         sameSite: "none",
         maxAge: 30 * 60 * 60 * 24 * 1000,
         signed: true
-        })
+        }) */
+        res.setHeader("Set-Cookie", `${token}; HttpOnly; Secure; SameSite=Strict `)
 
         console.log("cookies sent");
 }
