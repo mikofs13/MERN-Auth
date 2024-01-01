@@ -11,7 +11,7 @@ const generateToken = (res,userId) => {
     
 
     res.cookie("jwt", token, {
-        domain: ["mern-first-mike-project.onrender", "mern-first-mike-project", "mern-first-mike-project.onrender.com"]
+        domain: ["mern-first-mike-project.onrender", "mern-first-mike-project", "mern-first-mike-project.onrender.com"],
         httpOnly: true,
         secure: process.env.NODE_ENV !== "development",
         sameSite: "None",
