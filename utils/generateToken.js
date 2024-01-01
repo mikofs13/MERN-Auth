@@ -14,7 +14,7 @@ const generateToken = (res,userId) => {
         domain: ["mern-first-mike-project.onrender", "mern-first-mike-project", "mern-first-mike-project.onrender.com"],
         httpOnly: true,
         secure: process.env.NODE_ENV !== "development",
-        sameSite: "None",
+        sameSite: "none",
         maxAge: 30 * 60 * 60 * 24 * 1000,
 
         }) 
