@@ -9,11 +9,12 @@ const generateToken = (res,userId) => {
     console.log(token);
 
     
+    // In your server response headers
+    res.setHeader('Access-Control-Allow-Credentials', 'true');
 
     res.cookie("jwt", token, {
         domain: ".onrender.com",
-        httpOnly: true,
-        secure: process.env.NODE_ENV !== "development",
+        secure: true,
         sameSite: "None",
         maxAge: 30 * 60 * 60 * 24 * 1000,
 
