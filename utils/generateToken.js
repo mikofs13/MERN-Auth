@@ -11,10 +11,10 @@ const generateToken = (res,userId) => {
     
 
     res.cookie("jwt", token, {
-        domain: "mern-first-mike-project-api.onrender.com",
+        domain: ".onrender.com",
         httpOnly: true,
         secure: process.env.NODE_ENV !== "development",
-        sameSite: "none",
+        sameSite: "None",
         maxAge: 30 * 60 * 60 * 24 * 1000,
 
         }) 
